@@ -57,7 +57,7 @@ function hamToggle(x){
   x.classList.toggle("change")
 }
 
-//show and hide product page 
+//show and hide products
 function showImages () {
   const p = document.querySelector(".gallery")
   if(p.style.display === "none"){
