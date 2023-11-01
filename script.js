@@ -5,11 +5,12 @@ const navMenu = document.querySelector(".nav-menu")
 
 const imgArray = new Array()
 
+//array of 9 images for gallery
 for(let i = 0;i <= 8;i++) {
   imgArray[i] = new Image()
   if(i==0) {
     imgArray[i].src = 'assets/images/chocolate.png'
-    document.getElementById("chocolate").prepend(imgArray[i])
+    document.getElementById("chocolate").prepend(imgArray[i]) 
   }
   else if(i==1) {
     imgArray[i].src = 'assets/images/caramel donut.png'
@@ -47,6 +48,7 @@ for(let i = 0;i <= 8;i++) {
 
 hamburger.addEventListener("click", mobileMenu)
 
+//navigation toggle for mobile 
 function mobileMenu() {
   navMenu.classList.toggle("active")
 }
@@ -55,12 +57,13 @@ function hamToggle(x){
   x.classList.toggle("change")
 }
 
-const ctaButton = document.querySelector('.cta')
-
-ctaButton.addEventListener('mouseover', ()=>{
-  ctaButton.style.backgroundColor = 'blue';
-});
-
-ctaButton.addEventListener('mouseout', () =>{
-  ctaButton.style.backgroundColor = 'red';
-});
+//show and hide product page 
+function showImages () {
+  const p = document.querySelector(".gallery")
+  if(p.style.display === "none"){
+    p.style.display = "Grid"
+  }
+  else{
+    p.style.display = "none"
+  }
+}
